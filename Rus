@@ -1,0 +1,7 @@
+<?php
+// Simple PHP example
+echo "Hello, welcome to my website!<br>";
+
+$date = date("Y-m-d");
+echo "Today's date is: " . $date;
+?>
