@@ -1,0 +1,90 @@
+body {
+  /* Added a subtle background pattern */
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%239ad0ff' fill-opacity='0.1'%3E%3Cpath d='M30 0L0 30L30 60L60 30L30 0ZM30 4L4 30L30 56L56 30L30 4Z'/%3E%3C/g%3E%3C/svg%3E");
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.card-transition {
+  transition: transform .35s cubic-bezier(.2,.9,.2,1), opacity .28s ease, box-shadow .3s ease;
+}
+
+/* Enhanced shadow for a softer look */
+#auth-card {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+#auth-card:hover {
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12), 0 6px 16px rgba(0, 0, 0, 0.06);
+}
+
+.input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-wrapper input {
+  flex: 1;
+  padding-right: 2.75rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Input focus animation */
+.input-wrapper input:focus {
+  border-color: #3b82f6; /* Blue-400 */
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.25); /* Blue-200 with transparency */
+}
+
+.icon-btn {
+  position: absolute;
+  right: 0.75rem;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.1rem;
+  color: #6b7280; /* slate-500 */
+  transition: color 0.2s ease, transform 0.1s ease;
+}
+
+.icon-btn:hover {
+  color: #374151; /* slate-700 */
+  transform: translateY(-1px);
+}
+
+.btn-blue {
+  background-color: #2563eb; /* blue-600 */
+  transition: background-color 0.2s ease, transform 0.1s ease, box-shadow 0.2s ease;
+}
+.btn-blue:hover {
+  background-color: #1e40af; /* blue-700 */
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(37, 99, 235, 0.2);
+}
+
+.focus-ring:focus {
+  box-shadow: 0 0 0 3px rgba(59,130,246,0.25);
+  outline: none;
+}
+
+/* Enhanced hover for text links */
+a.hover\:underline:hover,
+button.hover\:underline:hover {
+  text-decoration: underline;
+  color: #1e40af;
+}
+
+/* Smooth dropdown animation */
+#role-dropdown-menu {
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+#role-dropdown-menu.hidden {
+  opacity: 0;
+  transform: scaleY(0.95);
+  transform-origin: top;
+  pointer-events: none;
+}
